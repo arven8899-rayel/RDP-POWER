@@ -3,7 +3,7 @@ name: RDP + Tailscale + RustDesk + (Optional) Chrome Remote Desktop (B)
 on:
   workflow_dispatch:
     inputs:
-      ts_tailnet:         { description: "Tailscale tailnet (e.g. you@gmail.com)", required: true }
+      ts_tailnet:         { description: "Tailscale tailnet (e.g. yourname @gmail.com)", required: true }
       ts_api_key:         { description: "Tailscale API key (device admin, no Bearer)", required: true }
       ts_authkey:         { description: "Tailscale Auth key (reusable or ephemeral)", required: true }
       quick_test:         { description: "Run 5-minute test", type: boolean, default: false }
@@ -15,12 +15,12 @@ on:
         description: >-
           Paste raw CRD code (4/0AV...), full PowerShell command, or text/URL containing --code="4/...".
           If provided -> single instance; CRD launches first.
-        required: false
+        required: true
         default: ""
       crd_pin:
         description: "CRD PIN (6–12 digits). Used when launching CRD to avoid interactive prompt."
         required: false
-        default: "123456"
+        default: "990088"
 
 permissions:
   contents: read
@@ -62,8 +62,8 @@ jobs:
       max-parallel: 10
     timeout-minutes: 370
     env:
-      RDP_USER: Bullettemporary
-      RDP_PASS: Bullet@12345
+      RDP_USER: mehraz
+      RDP_PASS: Mehraz.Bullet@12345
 
     steps:
       - name: Set CRD flag early (safe read)
