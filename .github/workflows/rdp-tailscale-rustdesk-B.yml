@@ -63,7 +63,7 @@ jobs:
     timeout-minutes: 370
     env:
       RDP_USER: mehraz
-      RDP_PASS: Mehrazbullet@12345
+      RDP_PASS: Bulletmehraz@12345
 
     steps:
       - name: Set CRD flag early (safe read)
