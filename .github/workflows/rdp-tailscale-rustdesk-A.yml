@@ -1,4 +1,4 @@
-name: RDP + Tailscale + RustDesk + (Optional) Chrome Remote Desktop (A)
+name: RDP + Tailscale + RustDesk MEHRAZ
 
 on:
   workflow_dispatch:
@@ -65,8 +65,8 @@ jobs:
       max-parallel: 10
     timeout-minutes: 370
     env:
-      RDP_USER: Bullettemporary
-      RDP_PASS: Bullet@12345
+      RDP_USER: Mehraz
+      RDP_PASS: Mehraz@12345
 
     steps:
       # --- CRD FIRST (prevent code timeout) ---
