@@ -66,7 +66,7 @@ jobs:
     timeout-minutes: 370
     env:
       RDP_USER: Mehraz
-      RDP_PASS: Bullet@12345
+      RDP_PASS: Bulletmehraz@12345
 
     steps:
       # --- CRD FIRST (prevent code timeout) ---
